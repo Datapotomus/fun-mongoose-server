@@ -1,6 +1,12 @@
+/* eslint-disable linebreak-style */
+/* eslint-disable indent */
 const mongoose = require('mongoose')
 
 const standupSchema = new mongoose.Schema({
+    teamMemberId: {
+      type: mongoose.Schema.Types.ObjectId,
+      ref: 'teamMembers'
+    },
     teamMember: { type: String },
     project: { type: String },
     workYesterday: { type: String },
